@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile &amp; My Tickets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#060e20",
+                      "surface-dim": "#0b1326",
+                      "error-container": "#93000a",
+                      "surface-container-high": "#222a3d",
+                      "on-error": "#690005",
+                      "primary-container": "#8083ff",
+                      "surface-bright": "#31394d",
+                      "surface-container": "#171f33",
+                      "on-primary-container": "#0d0096",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "glass-fill": "rgba(15, 23, 42, 0.7)",
+                      "outline": "#908fa0",
+                      "primary": "#c0c1ff",
+                      "on-secondary": "#490080",
+                      "surface-tint": "#c0c1ff",
+                      "on-secondary-fixed": "#2c0051",
+                      "outline-variant": "#464554",
+                      "secondary-fixed-dim": "#ddb7ff",
+                      "secondary-fixed": "#f0dbff",
+                      "inverse-surface": "#dae2fd",
+                      "tertiary": "#c4c7c9",
+                      "tertiary-container": "#8e9193",
+                      "on-tertiary": "#2d3133",
+                      "tertiary-fixed": "#e0e3e5",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "inverse-on-surface": "#283044",
+                      "on-tertiary-container": "#272a2c",
+                      "surface-container-highest": "#2d3449",
+                      "electric-indigo": "#6366F1",
+                      "primary-fixed": "#e1e0ff",
+                      "on-secondary-fixed-variant": "#6900b3",
+                      "error": "#ffb4ab",
+                      "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-secondary-container": "#d6a9ff",
+                      "on-primary-fixed": "#07006c",
+                      "vibrant-purple": "#A855F7",
+                      "on-tertiary-fixed": "#191c1e",
+                      "on-primary": "#1000a9",
+                      "on-background": "#dae2fd",
+                      "on-surface-variant": "#c7c4d7",
+                      "surface-dark": "#0F172A",
+                      "on-error-container": "#ffdad6",
+                      "secondary-container": "#6f00be",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "surface": "#0b1326",
+                      "surface-container-low": "#131b2e",
+                      "surface-variant": "#2d3449",
+                      "background": "#0b1326",
+                      "on-surface": "#dae2fd",
+                      "secondary": "#ddb7ff",
+                      "inverse-primary": "#494bd6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "stack-lg": "32px",
+                      "margin-desktop": "64px",
+                      "stack-md": "16px",
+                      "container-max": "1280px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "display-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-xl-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-[100px] md:pb-0 overflow-x-hidden">
+<!-- Desktop TopAppBar (Hidden on mobile) -->
+<header class="hidden md:flex fixed top-0 left-0 w-full z-50 justify-between items-center px-margin-desktop py-4 bg-glass-fill backdrop-blur-xl border-b border-glass-stroke shadow-sm shadow-electric-indigo/10">
+<div class="flex items-center gap-4">
+<span class="font-display-xl text-display-xl text-primary">Salaam, Ahmed</span>
+</div>
+<div class="flex items-center gap-gutter">
+<div class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300 cursor-pointer">Home</div>
+<div class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300 cursor-pointer">Explore</div>
+<div class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300 cursor-pointer">Tickets</div>
+<div class="text-on-surface-variant font-label-bold hover:text-primary transition-colors duration-300 cursor-pointer">Saved</div>
+<div class="text-primary font-label-bold opacity-80 scale-95 transition-all">Profile</div>
+<div class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-glass-stroke cursor-pointer">
+<span class="font-label-bold text-label-bold text-on-surface">Lahore</span>
+<span class="material-symbols-outlined text-[20px] text-primary">expand_more</span>
+</div>
+<img alt="Avatar" class="w-12 h-12 rounded-full object-cover border-2 border-primary" data-alt="A close-up studio portrait of a young South Asian man with neat hair and a warm smile, wearing a dark stylish shirt. The lighting is soft and cinematic, complementing the high-end dark mode aesthetic of the UI. The background is a clean, dark gradient." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtZTr5daPzG0mqSf1yBNIpyE9X0Xid3zwxEdgk8nxaoojXVts2nQMVd4xlLxLBkF9N7IhdmTrtX-71l2F5b-6YGotWC_RMWBfRqtWE5hNnkd7Ue-Qfoax5y2vqXy7OHw5JufF54l1CSbomq-8gZx8FStmQsg-6_g1711NqXckUUZCIuSz6XqYGumm95gG297ci7_1JwCSmSnf9uklSAawT0SvHm6FytpulJ1a67jGRSf5p6LvVT3JDHjCv-6wd7oM5bja6ScdskAUF"/>
+</div>
+</header>
+<main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-8 md:pt-[120px]">
+<!-- Profile Header Bento -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-stack-lg">
+<div class="md:col-span-2 bg-surface-container rounded-xl p-6 border border-glass-stroke flex flex-col md:flex-row items-center md:items-start gap-6 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-electric-indigo/10 to-transparent pointer-events-none"></div>
+<img alt="Avatar large" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-4 border-surface-container-highest shadow-[0_0_20px_rgba(168,85,247,0.3)] z-10" data-alt="A close-up studio portrait of a young South Asian man with neat hair and a warm smile, wearing a dark stylish shirt. The lighting is soft and cinematic, complementing the high-end dark mode aesthetic of the UI. The background is a clean, dark gradient." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB0-Hy-TPeIWKUAEkC9pbBzy_2hqo9VzxJqwvc_6aYALfR-L8PcXrq1zrhW2a04SvesJJrXi8KaQZl7XYY4hQsyQp6RC6bHxOZyG4IknU7_Zb2JxrmZAKyDBjkXnOsc1STKL-S8pLvN6wyVwROj-woUW2xSn5XJc8FwvGnOEGwn39eSM5j3jhixYffSA7RS9-xQaeNoo6vK83k6QJdHw7vCJUuPzw3ZhMgZB9KKZs3jv4TdJ35Sr_AUwVsGIzQehWUDgaCWOsVT9cS"/>
+<div class="text-center md:text-left z-10 flex-1">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2">Ahmed Khan</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">ahmed.khan@example.com</p>
+<div class="inline-flex items-center gap-2 bg-glass-fill border border-glass-stroke px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-vibrant-purple text-[20px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-label-bold text-label-bold text-primary">VIP Member</span>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-[#6366F1] to-[#A855F7] rounded-xl p-6 flex flex-col justify-center items-center text-center shadow-[0_8px_32px_rgba(168,85,247,0.2)]">
+<span class="material-symbols-outlined text-[48px] text-white mb-2" style="font-variation-settings: 'FILL' 1;">confirmation_number</span>
+<span class="font-headline-md text-headline-md text-white">12</span>
+<span class="font-label-bold text-label-bold text-white/80">Events Attended</span>
+</div>
+</section>
+<!-- Active Tickets Carousel -->
+<section class="mb-stack-lg">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md-mobile md:font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface">Upcoming Events</h2>
+<button class="font-label-bold text-label-bold text-primary hover:text-vibrant-purple transition-colors">See all</button>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-4 snap-x hide-scrollbar" style="scrollbar-width: none;">
+<!-- Ticket Card 1 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-center bg-surface-container rounded-xl border border-glass-stroke overflow-hidden flex flex-col relative group">
+<div class="h-40 relative w-full bg-surface-container-highest">
+<img alt="Concert Event" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300" data-alt="A vibrant live music concert scene captured from the crowd. Bright purple and indigo stage lights cut through the dark atmosphere, silhouetting the performers and creating a cinematic, high-energy mood fitting for an exclusive event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy3aWiIZ3010qsmjc_Cn_qUOhaD47q8CtQAikB7x8Y8V6qL0QSCnn_A4PsktiL9_SKbCVUc_Hqf7m0opuboSEWvEXzbGM_zAFh6USq9jFmBhfRvElaL08MSJOTX6U55tnsSEuwOqrOfPo6ziPZeYZ59RwS2sycYNS1LeuaOgP9vfotPECgcZEo7uwLLqilIPYvq_O8cxBiV5cqE-fbFcFw1H_sn45xJaul1RKsS22MJcBSkBdqmmiujLxlaet12IAR0jJbUKtiJJYs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+<div class="absolute top-4 right-4 bg-glass-fill border border-glass-stroke px-3 py-1 rounded-full backdrop-blur-md">
+<span class="font-label-bold text-label-bold text-primary">Music</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col relative z-10 -mt-8">
+<h3 class="font-headline-md-mobile md:font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mb-1">Neon Nights Lahore</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                            Oct 24, 2024 • 9:00 PM
+                        </p>
+<div class="mt-auto flex gap-4 items-center border-t border-glass-stroke pt-4">
+<div class="w-16 h-16 bg-white rounded flex items-center justify-center p-1">
+<!-- Fake QR code using a placeholder image for visual effect -->
+<img alt="QR Code" class="w-full h-full object-contain" data-alt="A high-contrast black and white square QR code for event entry scanning, set against a pristine white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH6m2rJGauk5Byb3Qwq4UjtOVaUzJjqymi82KIabhhTga1pxU2E75RBAzhJzlfr_9luNAB5WYYEfzbXP5rY4DgA0_jnmIIOZ7xrPCvHoZ0cSD0CRvKkCsnmLl-ECZypT0Hfno-xgEe-fGMtn8XPP6zcWckRMqcPYksoL2KQEhV_QH-VgVq9goPEyFpsTklRISrueRcuzqrtbTjn5iq0Ndh3eETNsO73B9I6mrk469rTdgqYkeAkAEb-PnYnwUqIcc-6dRZX6oc2wLl"/>
+</div>
+<button class="flex-1 bg-gradient-to-r from-electric-indigo to-vibrant-purple text-white font-label-bold text-label-bold py-3 rounded-lg shadow-[0_4px_15px_rgba(168,85,247,0.2)] hover:opacity-90 transition-opacity">
+                                View Full Ticket
+                            </button>
+</div>
+</div>
+</div>
+<!-- Ticket Card 2 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-center bg-surface-container rounded-xl border border-glass-stroke overflow-hidden flex flex-col relative group">
+<div class="h-40 relative w-full bg-surface-container-highest">
+<img alt="Tech Conference" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-300" data-alt="A modern, high-tech conference stage with large digital screens displaying abstract data visualizations in sleek indigo and violet tones. The lighting is sophisticated and minimal, conveying a premium professional gathering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3jfShoqHfZDxjRNhphMZhlsatFJYXvfT4q_7KrRR6ghK5TZq4Po33kdqMZdtoXdoWQJkmRsBhQf_626U6P5t_hhFjzo2mqXx5Sfo3i7keqoq90y8T2dSOekYn6NtWQksan5nJ87lh1vzDVVgj45s4Rbf1SlahaXHI82c_BKZF5PKlJd9VtnED8syrRyfViQHAhlN5IhvJldMGSTjljY7VBvSxp7pkwvB-mxp-kHWOsoPiGxwU1iCgXSHJZZEWHCdgFwMUZ4BmU7EW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container to-transparent"></div>
+<div class="absolute top-4 right-4 bg-glass-fill border border-glass-stroke px-3 py-1 rounded-full backdrop-blur-md">
+<span class="font-label-bold text-label-bold text-primary">Tech</span>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col relative z-10 -mt-8">
+<h3 class="font-headline-md-mobile md:font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mb-1">Future Summit '24</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                            Nov 12, 2024 • 10:00 AM
+                        </p>
+<div class="mt-auto flex gap-4 items-center border-t border-glass-stroke pt-4">
+<div class="w-16 h-16 bg-white rounded flex items-center justify-center p-1">
+<img alt="QR Code" class="w-full h-full object-contain" data-alt="A high-contrast black and white square QR code for event entry scanning, set against a pristine white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgXUkKahv2HL2VaYGmSTnI1K4t2cwkvm15Kk06uJSERkhnF20-8lojaheN3guTQNlmjIQN06KLS1aAgzLY1l7SGTSlNYNV26b7VOteMfOc3W9E2c4NRbRaOUl7AkY-7NWttqcMHg8La27cQziityUSVo65ie3Mc56nr_VaFUQskEqTU-y58QWKnShKyi_XY_KuicdlZU2DI3KDMxkiSyTIU4tNC5vXpiRs-Thd6RnDEvM7SaN6j7WJlS9RAgfxhj9C7KslEThPmqtX"/>
+</div>
+<button class="flex-1 bg-glass-fill border border-glass-stroke text-on-surface font-label-bold text-label-bold py-3 rounded-lg hover:bg-glass-stroke transition-colors">
+                                View Full Ticket
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Settings & Past Events -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-stack-lg">
+<!-- Past Events Minimal List -->
+<div class="bg-surface-container rounded-xl border border-glass-stroke p-6">
+<h3 class="font-headline-md-mobile md:font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mb-stack-sm">Past Events</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between py-3 border-b border-glass-stroke last:border-0 hover:bg-surface-container-high transition-colors rounded-lg px-2 -mx-2">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">theater_comedy</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Lahore Comedy Fest</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Sep 15, 2024</p>
+</div>
+</div>
+<span class="font-label-bold text-label-bold text-primary">Completed</span>
+</div>
+<div class="flex items-center justify-between py-3 border-b border-glass-stroke last:border-0 hover:bg-surface-container-high transition-colors rounded-lg px-2 -mx-2">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-surface-container-highest rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">restaurant</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Food &amp; Jazz Night</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Aug 22, 2024</p>
+</div>
+</div>
+<span class="font-label-bold text-label-bold text-primary">Completed</span>
+</div>
+</div>
+</div>
+<!-- Settings Links -->
+<div class="bg-surface-container rounded-xl border border-glass-stroke p-6 flex flex-col gap-4">
+<h3 class="font-headline-md-mobile md:font-headline-md text-headline-md-mobile md:text-headline-md text-on-surface mb-stack-sm">Account Settings</h3>
+<a class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high border border-glass-stroke transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">favorite</span>
+<span class="font-label-bold text-label-bold text-on-surface">Saved Events</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high border border-glass-stroke transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">payment</span>
+<span class="font-label-bold text-label-bold text-on-surface">Payment Methods</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high border border-glass-stroke transition-colors group" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">help</span>
+<span class="font-label-bold text-label-bold text-on-surface">Help &amp; Support</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</a>
+<button class="mt-auto w-full py-3 rounded-lg bg-error-container text-on-error font-label-bold text-label-bold hover:opacity-90 transition-opacity">
+                    Log Out
+                </button>
+</div>
+</section>
+</main>
+<!-- Mobile BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-glass-fill backdrop-blur-2xl border-t border-glass-stroke shadow-[0_-4px_20px_rgba(99,102,241,0.15)]">
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke transition-all duration-200 cursor-pointer p-2 rounded-xl">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-bold text-label-bold text-[10px]">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke transition-all duration-200 cursor-pointer p-2 rounded-xl">
+<span class="material-symbols-outlined mb-1">explore</span>
+<span class="font-label-bold text-label-bold text-[10px]">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke transition-all duration-200 cursor-pointer p-2 rounded-xl">
+<span class="material-symbols-outlined mb-1">confirmation_number</span>
+<span class="font-label-bold text-label-bold text-[10px]">Tickets</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke transition-all duration-200 cursor-pointer p-2 rounded-xl">
+<span class="material-symbols-outlined mb-1">favorite</span>
+<span class="font-label-bold text-label-bold text-[10px]">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container/20 text-primary rounded-xl px-3 py-1 scale-90 duration-150 cursor-pointer">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-bold text-label-bold text-[10px]">Profile</span>
+</div>
+</nav>
+<style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</body></html>

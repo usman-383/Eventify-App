@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eventify PK - Home</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Design System) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#060e20",
+                    "surface-dim": "#0b1326",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#222a3d",
+                    "on-error": "#690005",
+                    "primary-container": "#8083ff",
+                    "surface-bright": "#31394d",
+                    "surface-container": "#171f33",
+                    "on-primary-container": "#0d0096",
+                    "primary-fixed-dim": "#c0c1ff",
+                    "glass-fill": "rgba(15, 23, 42, 0.7)",
+                    "outline": "#908fa0",
+                    "primary": "#c0c1ff",
+                    "on-secondary": "#490080",
+                    "surface-tint": "#c0c1ff",
+                    "on-secondary-fixed": "#2c0051",
+                    "outline-variant": "#464554",
+                    "secondary-fixed-dim": "#ddb7ff",
+                    "secondary-fixed": "#f0dbff",
+                    "inverse-surface": "#dae2fd",
+                    "tertiary": "#c4c7c9",
+                    "tertiary-container": "#8e9193",
+                    "on-tertiary": "#2d3133",
+                    "tertiary-fixed": "#e0e3e5",
+                    "on-primary-fixed-variant": "#2f2ebe",
+                    "inverse-on-surface": "#283044",
+                    "on-tertiary-container": "#272a2c",
+                    "surface-container-highest": "#2d3449",
+                    "electric-indigo": "#6366F1",
+                    "primary-fixed": "#e1e0ff",
+                    "on-secondary-fixed-variant": "#6900b3",
+                    "error": "#ffb4ab",
+                    "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "on-secondary-container": "#d6a9ff",
+                    "on-primary-fixed": "#07006c",
+                    "vibrant-purple": "#A855F7",
+                    "on-tertiary-fixed": "#191c1e",
+                    "on-primary": "#1000a9",
+                    "on-background": "#dae2fd",
+                    "on-surface-variant": "#c7c4d7",
+                    "surface-dark": "#0F172A",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#6f00be",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "surface": "#0b1326",
+                    "surface-container-low": "#131b2e",
+                    "surface-variant": "#2d3449",
+                    "background": "#0b1326",
+                    "on-surface": "#dae2fd",
+                    "secondary": "#ddb7ff",
+                    "inverse-primary": "#494bd6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "64px",
+                    "stack-md": "16px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-xl": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "display-xl-mobile": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Hide scrollbar for clean horizontal scrolls */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md min-h-screen antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 bg-glass-fill backdrop-blur-xl border-b border-glass-stroke shadow-sm shadow-electric-indigo/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-glass-stroke overflow-hidden bg-surface-container">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="A close-up portrait of a young South Asian professional male with a modern haircut, subtly lit by cool, cinematic neon lighting against a dark minimalist background, reflecting a premium digital aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSl4KIM1GIruunwOYgQXxO27PRL90vpS4kaUIBgb2CDQtg1L8KZcdNpwUeVRbYGitesEm-9o7ySekZJJ1TBn0RAdyRGj9q3bbhZfedulEAdVGI96VgQxyKKGIZa3TBFAENmAP-pt0aGsrcRqrmQ9KXLT-bg1IsfSJMjVK25waFQS6JQqOI8dPtXPfytIHmvix06RobLwqAPnJwZPeI-x0QtYbpGLC5hNee_hbJiaX1hYKOtYtBIZ6Qcx2R7pj03qT9GJoMYrn9J0hf"/>
+</div>
+<h1 class="font-headline-md-mobile text-headline-md-mobile text-primary">Salaam, Ahmed</h1>
+</div>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-300">
+<span class="font-label-bold text-label-bold">Lahore</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 md:pb-12 max-w-container-max mx-auto md:px-margin-desktop">
+<!-- Search Section -->
+<section class="px-margin-mobile md:px-0 mb-stack-lg">
+<div class="flex items-center bg-surface-container border border-glass-stroke rounded-xl px-4 py-3 focus-within:border-electric-indigo focus-within:shadow-[0_0_15px_rgba(99,102,241,0.2)] transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="search">search</span>
+<input class="bg-transparent flex-1 font-body-md text-body-md text-on-surface outline-none placeholder:text-on-surface-variant w-full" placeholder="Find concerts, workshops, sports..." type="text"/>
+<div class="h-6 w-px bg-glass-stroke mx-3"></div>
+<button class="text-primary hover:text-vibrant-purple transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</section>
+<!-- Featured Section (Cinematic Carousel) -->
+<section class="mb-stack-lg">
+<div class="px-margin-mobile md:px-0 mb-4 flex justify-between items-end">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Trending Now</h2>
+<button class="text-primary font-label-bold text-label-bold uppercase tracking-widest text-xs hover:text-vibrant-purple transition-colors">See All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto px-margin-mobile md:px-0 snap-x snap-mandatory pb-4 hide-scrollbar">
+<!-- Featured Card 1 -->
+<div class="relative min-w-[320px] md:min-w-[480px] h-[400px] md:h-[500px] rounded-[24px] overflow-hidden snap-center group border border-glass-stroke shadow-lg shadow-electric-indigo/5">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A massive, high-energy live concert crowd illuminated by piercing purple and blue laser lights cutting through atmospheric fog. The silhouette of a charismatic performer stands center stage. The scene embodies a premium, immersive digital entertainment experience with deep black shadows and vibrant neon highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXaFGmHf3DsSiZYa1e_TLTNU5tUGbNJ4t0AQoe8RskFeocuf5CQMKvol0JEQyErHiSOQv9lKxLKUTIM4oQPuBmHYUzLgscvQ5iBSdl7lFBox8lIUK94-qRp6DBzBTpBsBl7Bovz20sYTcpa7R-IbEZXCtCbowOh1Du7iJG8CLQFRUVaG9ZjR81oPvVgElHK27zUl54xh8VxOeZvWcSBsi4XPisVJsjLMFiIstC4kPtMIl6LubJA5K-_pmFyHBSZY3uAuJu57Od8mqI')"></div>
+<!-- Cinematic Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent"></div>
+<!-- Top Tag -->
+<div class="absolute top-5 left-5">
+<span class="bg-glass-fill backdrop-blur-md border border-glass-stroke text-on-surface px-4 py-1.5 rounded-full font-label-bold text-label-bold text-xs uppercase tracking-wider">Live Music</span>
+</div>
+<!-- Content Overlay -->
+<div class="absolute bottom-5 left-5 right-5">
+<p class="text-secondary font-label-bold text-label-bold mb-2 tracking-widest uppercase text-sm">Nov 15 • Alhamra Cultural Complex</p>
+<h3 class="font-display-xl-mobile text-display-xl-mobile text-on-surface leading-tight mb-4 drop-shadow-md">Atif Aslam<br/>Live in Lahore</h3>
+<!-- Glassmorphic Footer -->
+<div class="flex justify-between items-center bg-glass-fill backdrop-blur-xl border border-glass-stroke p-3 rounded-xl">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-xs">Starting from</span>
+<span class="text-primary font-label-bold text-label-bold">PKR 5,000</span>
+</div>
+<button class="bg-gradient-to-r from-electric-indigo to-vibrant-purple text-white px-5 py-2.5 rounded-lg font-label-bold text-label-bold shadow-[0_4px_15px_rgba(168,85,247,0.4)] hover:shadow-[0_6px_20px_rgba(168,85,247,0.6)] transition-all">Get Tickets</button>
+</div>
+</div>
+</div>
+<!-- Featured Card 2 -->
+<div class="relative min-w-[320px] md:min-w-[480px] h-[400px] md:h-[500px] rounded-[24px] overflow-hidden snap-center group border border-glass-stroke shadow-lg shadow-vibrant-purple/5">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An energetic outdoor music festival scene captured at dusk, featuring a massive stage glowing with warm amber and deep indigo lighting. Thousands of young attendees are silhouetted against the bright, high-tech stage setup. The overall aesthetic feels like a luxurious, exclusive Gen Z cultural gathering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbxdRzwKS0yiGWcT8Cba7p1ZjRj3dObuEi3KjIskTpGUCQYPj3AXE8bAFaA9qlEf8Y7xCjvua_PoZqbJb0WO0B0Ygn5bVRT4mqyXw5rclZCQnFVCtWjk8NICVgP4z5iz9cUtsDCz8pslajzBwbvX49L2TpyUx9QjOWS1e9s0HaybC69jPskCWDOziFC9mnNL86Ab51tSgCPrVcK0rsVsB0BdoC7j1Y1QhCJnSDf6hbuJyv5LrawADrGh2t1-9ICBxzAk_seYQgl2HA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/50 to-transparent"></div>
+<div class="absolute top-5 left-5">
+<span class="bg-glass-fill backdrop-blur-md border border-glass-stroke text-on-surface px-4 py-1.5 rounded-full font-label-bold text-label-bold text-xs uppercase tracking-wider">Festival</span>
+</div>
+<div class="absolute bottom-5 left-5 right-5">
+<p class="text-secondary font-label-bold text-label-bold mb-2 tracking-widest uppercase text-sm">Oct 28-29 • LUMS Campus</p>
+<h3 class="font-display-xl-mobile text-display-xl-mobile text-on-surface leading-tight mb-4 drop-shadow-md">LUMS Music<br/>Fest 2024</h3>
+<div class="flex justify-between items-center bg-glass-fill backdrop-blur-xl border border-glass-stroke p-3 rounded-xl">
+<div class="flex flex-col">
+<span class="text-on-surface-variant text-xs">Full Weekend Pass</span>
+<span class="text-primary font-label-bold text-label-bold">PKR 8,500</span>
+</div>
+<button class="bg-gradient-to-r from-electric-indigo to-vibrant-purple text-white px-5 py-2.5 rounded-lg font-label-bold text-label-bold shadow-[0_4px_15px_rgba(168,85,247,0.4)] hover:shadow-[0_6px_20px_rgba(168,85,247,0.6)] transition-all">Get Tickets</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="mb-stack-lg px-margin-mobile md:px-0">
+<h2 class="font-headline-md-mobile text-headline-md-mobile text-on-surface mb-4">Explore by Category</h2>
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
+<!-- Category 1 -->
+<button class="flex flex-col items-center gap-2 group min-w-[80px]">
+<div class="w-[72px] h-[72px] rounded-2xl bg-surface-container border border-glass-stroke flex items-center justify-center text-primary group-hover:bg-primary-container/20 group-hover:border-electric-indigo group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all duration-300">
+<span class="material-symbols-outlined text-[32px]" data-icon="mic">mic</span>
+</div>
+<span class="font-label-bold text-label-bold text-sm text-on-surface-variant group-hover:text-primary transition-colors">Concerts</span>
+</button>
+<!-- Category 2 -->
+<button class="flex flex-col items-center gap-2 group min-w-[80px]">
+<div class="w-[72px] h-[72px] rounded-2xl bg-surface-container border border-glass-stroke flex items-center justify-center text-primary group-hover:bg-primary-container/20 group-hover:border-electric-indigo group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all duration-300">
+<span class="material-symbols-outlined text-[32px]" data-icon="palette">palette</span>
+</div>
+<span class="font-label-bold text-label-bold text-sm text-on-surface-variant group-hover:text-primary transition-colors">Arts</span>
+</button>
+<!-- Category 3 -->
+<button class="flex flex-col items-center gap-2 group min-w-[80px]">
+<div class="w-[72px] h-[72px] rounded-2xl bg-surface-container border border-glass-stroke flex items-center justify-center text-primary group-hover:bg-primary-container/20 group-hover:border-electric-indigo group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all duration-300">
+<span class="material-symbols-outlined text-[32px]" data-icon="sports_esports">sports_esports</span>
+</div>
+<span class="font-label-bold text-label-bold text-sm text-on-surface-variant group-hover:text-primary transition-colors">Tech</span>
+</button>
+<!-- Category 4 -->
+<button class="flex flex-col items-center gap-2 group min-w-[80px]">
+<div class="w-[72px] h-[72px] rounded-2xl bg-surface-container border border-glass-stroke flex items-center justify-center text-primary group-hover:bg-primary-container/20 group-hover:border-electric-indigo group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all duration-300">
+<span class="material-symbols-outlined text-[32px]" data-icon="restaurant">restaurant</span>
+</div>
+<span class="font-label-bold text-label-bold text-sm text-on-surface-variant group-hover:text-primary transition-colors">Food</span>
+</button>
+<!-- Category 5 -->
+<button class="flex flex-col items-center gap-2 group min-w-[80px]">
+<div class="w-[72px] h-[72px] rounded-2xl bg-surface-container border border-glass-stroke flex items-center justify-center text-primary group-hover:bg-primary-container/20 group-hover:border-electric-indigo group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all duration-300">
+<span class="material-symbols-outlined text-[32px]" data-icon="sports_soccer">sports_soccer</span>
+</div>
+<span class="font-label-bold text-label-bold text-sm text-on-surface-variant group-hover:text-primary transition-colors">Sports</span>
+</button>
+</div>
+</section>
+<!-- For You Section (Grid) -->
+<section class="px-margin-mobile md:px-0">
+<div class="flex justify-between items-end mb-4">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Curated For You</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Grid Item 1 -->
+<div class="bg-surface-container rounded-2xl overflow-hidden border border-glass-stroke shadow-sm hover:shadow-lg hover:shadow-electric-indigo/10 transition-all duration-300 group flex flex-col h-full cursor-pointer">
+<div class="h-[200px] relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A modern, high-tech startup pitch event taking place in a sleek, dimly lit industrial loft space. A dynamic speaker presents on a glowing futuristic screen to an engaged, sophisticated audience. The scene utilizes a moody, dark cinematic aesthetic with crisp electric blue and subtle purple lighting accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAS2BeSklI6Pj5hL5JPedT3Ygh9-SNZlgwyY22HYZJ6MI3nmfPjNhssFC6WdBT9ZF1dj8ICTKivQNEJvkDrp5f_rFlZqkL9hhSI-uHE6qnBDdKtFW47_fVj4eYUt4uw7778fMOkKo3SevEIZpoMgmqTXJGtnP1C2v--pOw_ptoNQCLAJXz7VCW6HOnB8yRUjukA_sYOWTE-Y_RQPB_IT9ItTj7Sg9hrjrER4OfaVB1t7xwAr_VIqXrWqGCdPD_9teFPrh_3LNUELaLJ')"></div>
+<div class="absolute top-3 right-3 bg-glass-fill backdrop-blur-md p-1.5 rounded-full border border-glass-stroke text-on-surface hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-secondary text-xs font-label-bold uppercase tracking-wide">Tech</span>
+<span class="w-1 h-1 rounded-full bg-glass-stroke"></span>
+<span class="text-on-surface-variant text-xs">Tomorrow, 10:00 AM</span>
+</div>
+<h4 class="font-headline-md-mobile text-headline-md-mobile text-on-surface mb-2 leading-tight">Pakathon Pitch Day 2024</h4>
+<p class="text-on-surface-variant text-sm font-body-md line-clamp-2 mb-4">Watch the top 10 startups from across Pakistan pitch their disruptive ideas to global investors.</p>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-glass-stroke">
+<span class="text-on-surface text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">location_on</span> NIC Lahore</span>
+<span class="text-primary font-label-bold text-label-bold">Free RSVP</span>
+</div>
+</div>
+</div>
+<!-- Grid Item 2 -->
+<div class="bg-surface-container rounded-2xl overflow-hidden border border-glass-stroke shadow-sm hover:shadow-lg hover:shadow-vibrant-purple/10 transition-all duration-300 group flex flex-col h-full cursor-pointer">
+<div class="h-[200px] relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An intimate, low-lit standup comedy club setting. A microphone stand sits center stage illuminated by a solitary dramatic spotlight against a dark brick wall background. The atmosphere is moody, exclusive, and evocative of premium underground entertainment spaces with stark contrast and rich shadows." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmliWilEHX6RJMlSE0LIdVoCk04mHL0sQA8hlNzRfb3WrBX6j-wGwRMopoOUSjhlqDP_FlfpxQJsyUZSWQgxeoBA7nDh4An_4uahefuW4R44lA7FlbbjiAUUtELrS4HcklC8dhZZsO-5j9RSph0qLSusPhbn6o6plIIU4abebtvNk9ZGZBmLxFNwXQZVkiQWAixY_ysJnd5UWrfpzplK-7_A_LfSaSqd90niokzzNt9lIGPvHSQhlZevZjUJOMq2eEmzLy9UD69qpO')"></div>
+<div class="absolute top-3 right-3 bg-glass-fill backdrop-blur-md p-1.5 rounded-full border border-glass-stroke text-on-surface hover:text-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-secondary text-xs font-label-bold uppercase tracking-wide">Comedy</span>
+<span class="w-1 h-1 rounded-full bg-glass-stroke"></span>
+<span class="text-on-surface-variant text-xs">Sat, Nov 18</span>
+</div>
+<h4 class="font-headline-md-mobile text-headline-md-mobile text-on-surface mb-2 leading-tight">Laugh Riot: Underground Edition</h4>
+<p class="text-on-surface-variant text-sm font-body-md line-clamp-2 mb-4">An exclusive evening featuring the rising stars of Lahore's underground comedy scene.</p>
+</div>
+<div class="flex justify-between items-center pt-4 border-t border-glass-stroke">
+<span class="text-on-surface text-sm flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">location_on</span> The Colony</span>
+<span class="text-primary font-label-bold text-label-bold">PKR 1,500</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-glass-fill backdrop-blur-2xl border-t border-glass-stroke shadow-[0_-4px_20px_rgba(99,102,241,0.15)] md:hidden">
+<!-- Active: Home -->
+<button class="flex flex-col items-center justify-center bg-primary-container/20 text-primary rounded-xl px-4 py-1.5 scale-95 transition-all duration-150">
+<span class="material-symbols-outlined text-[24px]" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-bold text-[10px] mt-1 tracking-wide">Home</span>
+</button>
+<!-- Inactive: Explore -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke rounded-xl px-4 py-1.5 transition-all duration-200">
+<span class="material-symbols-outlined text-[24px]" data-icon="explore">explore</span>
+<span class="font-label-bold text-[10px] mt-1 tracking-wide">Explore</span>
+</button>
+<!-- Inactive: Tickets -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke rounded-xl px-4 py-1.5 transition-all duration-200">
+<span class="material-symbols-outlined text-[24px]" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-label-bold text-[10px] mt-1 tracking-wide">Tickets</span>
+</button>
+<!-- Inactive: Saved -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke rounded-xl px-4 py-1.5 transition-all duration-200">
+<span class="material-symbols-outlined text-[24px]" data-icon="favorite">favorite</span>
+<span class="font-label-bold text-[10px] mt-1 tracking-wide">Saved</span>
+</button>
+<!-- Inactive: Profile -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-glass-stroke rounded-xl px-4 py-1.5 transition-all duration-200">
+<span class="material-symbols-outlined text-[24px]" data-icon="person">person</span>
+<span class="font-label-bold text-[10px] mt-1 tracking-wide">Profile</span>
+</button>
+</nav>
+</body></html>

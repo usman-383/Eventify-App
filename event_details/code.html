@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Details - Strings: The Farewell Tour</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#060e20",
+                        "surface-dim": "#0b1326",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#222a3d",
+                        "on-error": "#690005",
+                        "primary-container": "#8083ff",
+                        "surface-bright": "#31394d",
+                        "surface-container": "#171f33",
+                        "on-primary-container": "#0d0096",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "glass-fill": "rgba(15, 23, 42, 0.7)",
+                        "outline": "#908fa0",
+                        "primary": "#c0c1ff",
+                        "on-secondary": "#490080",
+                        "surface-tint": "#c0c1ff",
+                        "on-secondary-fixed": "#2c0051",
+                        "outline-variant": "#464554",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "secondary-fixed": "#f0dbff",
+                        "inverse-surface": "#dae2fd",
+                        "tertiary": "#c4c7c9",
+                        "tertiary-container": "#8e9193",
+                        "on-tertiary": "#2d3133",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "inverse-on-surface": "#283044",
+                        "on-tertiary-container": "#272a2c",
+                        "surface-container-highest": "#2d3449",
+                        "electric-indigo": "#6366F1",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "error": "#ffb4ab",
+                        "glass-stroke": "rgba(255, 255, 255, 0.12)",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-container": "#d6a9ff",
+                        "on-primary-fixed": "#07006c",
+                        "vibrant-purple": "#A855F7",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-primary": "#1000a9",
+                        "on-background": "#dae2fd",
+                        "on-surface-variant": "#c7c4d7",
+                        "surface-dark": "#0F172A",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#6f00be",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface": "#0b1326",
+                        "surface-container-low": "#131b2e",
+                        "surface-variant": "#2d3449",
+                        "background": "#0b1326",
+                        "on-surface": "#dae2fd",
+                        "secondary": "#ddb7ff",
+                        "inverse-primary": "#494bd6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "64px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "display-xl-mobile": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-xl-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased">
+<!-- Top Navigation (Mobile overlay) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile py-4 bg-transparent">
+<button aria-label="Go back" class="w-10 h-10 flex items-center justify-center rounded-full bg-glass-fill backdrop-blur-xl border border-glass-stroke text-on-surface hover:bg-glass-stroke transition-colors duration-200 shadow-sm shadow-electric-indigo/10">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<button aria-label="Share" class="w-10 h-10 flex items-center justify-center rounded-full bg-glass-fill backdrop-blur-xl border border-glass-stroke text-on-surface hover:bg-glass-stroke transition-colors duration-200 shadow-sm shadow-electric-indigo/10">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pb-32">
+<!-- Cinematic Hero Image -->
+<section class="relative w-full h-[530px] md:h-[618px]">
+<img alt="Concert Hero" class="w-full h-full object-cover" data-alt="A cinematic, wide-angle shot of a high-end music concert in a massive arena, captured from the perspective of the audience looking towards the brilliantly lit stage. The scene is immersed in deep, dark background tones (like deep space blues and pure blacks) with vibrant, piercing beams of electric indigo and vibrant purple light slicing through the atmosphere. The performers are silhouetted against a massive glowing LED screen displaying abstract, fluid generative art. The mood is electrifying, premium, and intensely atmospheric, perfectly capturing the aesthetic of a luxury music festival." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwuUe3gT78Sha04AvEkmvEg8q2uuNYq-mRWihBLevTnPelr2iWv5lUaxzdtAXx2yq4Ppu5l6y0JGUzb6yR_NFmXRRcNu-IfAucwKMWJ5LqOKmY4sDEhAuBaGlwLkVliABQZrFTfzYUcDw7a18SgtGdNjl-qWI7YIYh7lwIl7YWyX-k8SSr-mze0PNmEnM3mLQ1uDoO0tvLgSW0igCkcD1lWhNjiMoo2sUVZ40xsdB4x-AlqSnbK4oPjs9sfAs7bri0twR7bTZppvOa"/>
+<!-- Bottom Gradient Overlay to blend with content -->
+<div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-background to-transparent pointer-events-none"></div>
+</section>
+<!-- Content Container -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop -mt-16 relative z-10">
+<!-- Event Header Info -->
+<header class="mb-stack-lg">
+<div class="flex flex-wrap gap-2 mb-stack-sm">
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-bold text-label-bold border border-primary/20 backdrop-blur-sm">Music</span>
+<span class="px-3 py-1 rounded-full bg-primary-container/20 text-primary font-label-bold text-label-bold border border-primary/20 backdrop-blur-sm">Live Band</span>
+</div>
+<h1 class="font-display-xl-mobile text-display-xl-mobile md:font-display-xl md:text-display-xl mb-stack-sm text-on-surface tracking-tight">
+                    Strings: The Farewell Tour
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Experience the legendary pop-rock band one last time in an unforgettable, cinematic performance spanning three decades of music.
+                </p>
+</header>
+<!-- Key Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-stack-lg">
+<!-- Time & Date -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-high/50 border border-glass-stroke backdrop-blur-sm">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-variant text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+</div>
+<div>
+<h3 class="font-label-bold text-label-bold text-on-surface mb-1">Date &amp; Time</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Saturday, 25 Nov 2023</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Gates open at 7:00 PM</p>
+</div>
+</div>
+<!-- Location -->
+<div class="flex items-start gap-4 p-4 rounded-xl bg-surface-container-high/50 border border-glass-stroke backdrop-blur-sm">
+<div class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-variant text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-bold text-label-bold text-on-surface mb-1">Location</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Alhamra Open Air Theatre, Lahore</p>
+<!-- Map Preview Placeholder -->
+<div class="h-24 rounded-lg overflow-hidden relative border border-glass-stroke">
+<img alt="Map Location" class="w-full h-full object-cover" data-alt="A highly stylized, minimalist map visualization of an urban area in night mode. The map background is deep dark navy blue (almost black), with streets represented by glowing, thin lines in electric indigo and vibrant purple. A distinct, glowing drop pin marker in vibrant purple highlights a specific central location. The aesthetic is sleek, digital, and premium, fitting seamlessly into a high-end, dark-mode application design." data-location="Lahore" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACqRrGZ97hpxIwbZl3Q0CFmdITjKuwZ0IUrPgTiNfE5ouMLiTQnP83pg_QkfotSeR2XIYDcxulI01EKeMJfYeidpiNdKQ6nJuMiCUP4m5-wuV9NjxNt47EB8M9yxf2-ebEWjTSOhM7yYj-cTg0qquAfJoIhng9zC1Ohc28ZTpa-8Fay6CAhEYlhPpXKytt9C_tXMADdNILvmq7S6D7DZ-JN48mVIRiY87u1SJfzj7QHCCydeTCbSKO6we9O2-IdFRkiU0DUKvqiaz0"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Description -->
+<section class="mb-stack-lg max-w-3xl">
+<h2 class="font-headline-md text-headline-md mb-stack-md text-on-surface">About the Event</h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<p>
+                        Join us for an evening of pure nostalgia as Strings takes the stage for their final, highly anticipated farewell tour. Set against the stunning backdrop of the open-air theatre, this concert promises an immersive visual and auditory journey through their greatest hits.
+                    </p>
+<p>
+                        Expect a state-of-the-art cinematic stage design, utilizing vast LED screens and breathtaking lighting choreography that blends seamlessly with the night sky. This isn't just a concert; it's a celebration of a musical legacy.
+                    </p>
+</div>
+</section>
+<!-- Lineup / Performers -->
+<section class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md mb-stack-md text-on-surface">Lineup</h2>
+<div class="flex flex-wrap gap-6">
+<!-- Performer 1 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-surface-variant p-1">
+<img alt="Performer 1" class="w-full h-full object-cover rounded-full" data-alt="A moody, high-contrast portrait of a male musician in a dimly lit studio setting. He is softly illuminated by a side light that casts deep shadows, emphasizing a serious, artistic expression. The background is pitch black, allowing the subject to stand out. He wears a minimalist dark outfit, aligning with a sleek, premium cinematic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYLM6jgGE-4njouHcLXFT9oAc0D3bWZtZkGkE87zR3cN32OgwF3Vll7UxY_ady6wNOVx80bb-yR56dpTdu4mswQlreyU0DxK5ruHyVBxGrb7abiqCZFJlQ6M6vQ5y1mBrkzawS-Uf2Jga7OWGuYVnEPCU-Se-yH3Lp05AwNrVsOebB-yIAfffPolQkJYpCeXPX9SQnE2WkEEFMEqHzD5LIvpyZPhQYVPqSDGWPhsVBgeorV2X2r9LZvdZ2TSSHCtFWpngpXPHj6YMb"/>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">Faisal Kapadia</span>
+</div>
+<!-- Performer 2 -->
+<div class="flex flex-col items-center gap-2">
+<div class="w-20 h-20 rounded-full overflow-hidden border-2 border-surface-variant p-1">
+<img alt="Performer 2" class="w-full h-full object-cover rounded-full" data-alt="A moody, high-contrast portrait of a male guitarist tuning his instrument in a dimly lit studio setting. He is softly illuminated by a subtle purple rim light that outlines his profile against a deep dark background. The lighting is cinematic, creating a sense of depth and focus entirely on the artist and his instrument. The overall tone is professional, intense, and musically focused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD818BaJF5rN4DOyVtNQ9v18EgGNB10lnqV_lpK6ZUcbP-dJ5sHMTrmWtbQcL-ururnVckadLcwp59lnC3d3ddM2sGDY6MgYftgT4FK242egln-MszcIBMUNGHVn23ftznQpKlN7ycn-y6R4Hjq29O3QvRadfBdWitvs0wjwrtcLJxpKBwLcwyI3rfSZDqLNnzeQIk3qOQi0gGXv0B7j8LDU9liD7hHlt_xpy3rPnKqy8KdIUyG5F0sgkSsMjHuRSNnPslcL2tHVRH8"/>
+</div>
+<span class="font-label-bold text-label-bold text-on-surface">Bilal Maqsood</span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Sticky CTA Bottom Bar (Specific to Event Details) -->
+<div class="fixed bottom-0 left-0 w-full z-[60] bg-glass-fill backdrop-blur-2xl border-t border-glass-stroke shadow-[0_-4px_20px_rgba(99,102,241,0.15)] px-margin-mobile py-4 flex justify-between items-center md:px-margin-desktop">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface-variant">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Rs. 2,500</span>
+</div>
+<button class="bg-gradient-to-r from-electric-indigo to-vibrant-purple text-on-primary font-label-bold text-label-bold px-8 py-3 rounded-xl shadow-[0_4px_14px_0_rgba(168,85,247,0.39)] hover:opacity-90 hover:scale-95 transition-all duration-200">
+            Select Tickets
+        </button>
+</div>
+</body></html>
