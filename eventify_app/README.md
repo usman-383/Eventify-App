@@ -1,3 +1,3 @@
-# eventify_app
+# Eventify_app
 
 A new Flutter project.
